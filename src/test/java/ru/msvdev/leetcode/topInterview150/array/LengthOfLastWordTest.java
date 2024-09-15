@@ -1,4 +1,4 @@
-package ru.msvdev.leetcode.topInterview150.array.lengthOfLastWord;
+package ru.msvdev.leetcode.topInterview150.array;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -8,13 +8,13 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SolutionTest {
+class LengthOfLastWordTest {
 
     @ParameterizedTest
     @MethodSource("lengthOfLastWordTestData")
     void lengthOfLastWord(String input, int output) {
         // region Given
-        Solution solution = new Solution();
+        LengthOfLastWord solution = new LengthOfLastWord();
         // endregion
 
 

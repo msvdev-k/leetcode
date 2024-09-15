@@ -1,4 +1,4 @@
-package ru.msvdev.leetcode.topInterview150.array.romanToInteger;
+package ru.msvdev.leetcode.topInterview150.array;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -9,18 +9,18 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-class SolutionTest {
+class RomanToIntegerTest {
 
     @ParameterizedTest
     @MethodSource("romanToIntTestData")
     void romanToInt(String s, int num) {
         // region Given
-        Solution solution = new Solution();
+        RomanToInteger romanToInteger = new RomanToInteger();
         // endregion
 
 
         // region When
-        int integer = solution.romanToInt(s);
+        int integer = romanToInteger.romanToInt(s);
         // endregion
 
 

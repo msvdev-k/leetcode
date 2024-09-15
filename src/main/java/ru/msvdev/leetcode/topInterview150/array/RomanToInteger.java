@@ -1,6 +1,6 @@
-package ru.msvdev.leetcode.topInterview150.array.romanToInteger;
+package ru.msvdev.leetcode.topInterview150.array;
 
-public class Solution {
+public class RomanToInteger {
 
     public int romanToInt(String s) {
         int number = 0;

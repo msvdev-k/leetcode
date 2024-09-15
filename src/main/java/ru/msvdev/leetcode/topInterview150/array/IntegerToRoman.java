@@ -1,6 +1,6 @@
-package ru.msvdev.leetcode.topInterview150.array.integerToRoman;
+package ru.msvdev.leetcode.topInterview150.array;
 
-public class Solution {
+public class IntegerToRoman {
 
     public String intToRoman(int num) {
         StringBuilder romanBuilder = new StringBuilder();

@@ -1,4 +1,4 @@
-package ru.msvdev.leetcode.topInterview150.array.longestCommonPrefix;
+package ru.msvdev.leetcode.topInterview150.array;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -8,13 +8,13 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SolutionTest {
+class LongestCommonPrefixTest {
 
     @ParameterizedTest
     @MethodSource("longestCommonPrefixTestData")
     void longestCommonPrefix(String[] input, String output) {
         // region Given
-        Solution solution = new Solution();
+        LongestCommonPrefix solution = new LongestCommonPrefix();
         // endregion
 
 

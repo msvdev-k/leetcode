@@ -1,6 +1,6 @@
-package ru.msvdev.leetcode.topInterview150.array.lengthOfLastWord;
+package ru.msvdev.leetcode.topInterview150.array;
 
-public class Solution {
+public class LengthOfLastWord {
 
     public int lengthOfLastWord(String s) {
         int wordLength = 0;

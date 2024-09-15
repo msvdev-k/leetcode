@@ -1,6 +1,6 @@
-package ru.msvdev.leetcode.topInterview150.array.longestCommonPrefix;
+package ru.msvdev.leetcode.topInterview150.array;
 
-public class Solution {
+public class LongestCommonPrefix {
 
     public String longestCommonPrefix(String[] strs) {
         char[] prefix = strs[0].toCharArray();
