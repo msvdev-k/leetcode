@@ -17,9 +17,12 @@ public class LinkedListUtils {
     }
 
     public static ListNode mapToList(int[] listValues) {
+        final int n= listValues.length;
+        if (n==0) return null;
+
         final var numList = new ListNode(listValues[0]);
         var currentPosition = numList;
-        for (int i = 1; i < listValues.length; i++) {
+        for (int i = 1; i < n; i++) {
             var next = new ListNode(listValues[i]);
             currentPosition.next = next;
             currentPosition = next;
