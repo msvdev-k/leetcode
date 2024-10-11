@@ -4,10 +4,11 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Objects;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static ru.msvdev.leetcode.topInterview150.linkedlist.LinkedListUtils.compareList;
+import static ru.msvdev.leetcode.topInterview150.linkedlist.LinkedListUtils.mapToList;
 
 class N2AddTwoNumbersTest {
 
@@ -60,30 +61,5 @@ class N2AddTwoNumbersTest {
                 )
         );
     }
-
-
-    private boolean compareList(N2AddTwoNumbers.ListNode l1, N2AddTwoNumbers.ListNode l2) {
-        if ((l1 == null && l2 != null) || (l1 != null && l2 == null)) return false;
-        if (l1 == l2) return true;
-
-        while (Objects.equals(l1, l2) && l1 != null) {
-            l1 = l1.next;
-            l2 = l2.next;
-        }
-
-        return Objects.equals(l1, l2);
-    }
-
-    private N2AddTwoNumbers.ListNode mapToList(int[] list) {
-        final var numList = new N2AddTwoNumbers.ListNode(list[0]);
-        var currentPosition = numList;
-        for (int i = 1; i < list.length; i++) {
-            var next = new N2AddTwoNumbers.ListNode(list[i]);
-            currentPosition.next = next;
-            currentPosition = next;
-        }
-        return numList;
-    }
-
 
 }

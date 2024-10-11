@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static ru.msvdev.leetcode.topInterview150.linkedlist.LinkedListUtils.mapToList;
 
 class N141LinkedListCycleTest {
 
@@ -15,7 +16,7 @@ class N141LinkedListCycleTest {
     void hasCycle1(int[] head, int pos, boolean out) {
         // region Given
         var solution = new N141LinkedListCycle();
-        var list = getList(head, pos);
+        var list = mapToList(head, pos);
         // endregion
 
         // region When
@@ -33,7 +34,7 @@ class N141LinkedListCycleTest {
     void hasCycle2(int[] head, int pos, boolean out) {
         // region Given
         var solution = new N141LinkedListCycle();
-        var list = getList(head, pos);
+        var list = mapToList(head, pos);
         // endregion
 
         // region When
@@ -51,7 +52,7 @@ class N141LinkedListCycleTest {
     void hasCycle3(int[] head, int pos, boolean out) {
         // region Given
         var solution = new N141LinkedListCycle();
-        var list = getList(head, pos);
+        var list = mapToList(head, pos);
         // endregion
 
         // region When
@@ -74,30 +75,6 @@ class N141LinkedListCycleTest {
                         -1, false
                 )
         );
-    }
-
-
-    private N141LinkedListCycle.ListNode getList(int[] head, int pos) {
-        final int n = head.length;
-        if (n == 0) return null;
-
-        final var firstNode = new N141LinkedListCycle.ListNode(head[0]);
-        var previousNode = firstNode;
-        for (int i = 1; i < n; i++) {
-            final var nextNode = new N141LinkedListCycle.ListNode(head[i]);
-            previousNode.next = nextNode;
-            previousNode = nextNode;
-        }
-
-        if (pos >= 0) {
-            var posNode = firstNode;
-            for (int i = 0; i < pos; i++) {
-                posNode = posNode.next;
-            }
-            previousNode.next = posNode;
-        }
-
-        return firstNode;
     }
 
 }
