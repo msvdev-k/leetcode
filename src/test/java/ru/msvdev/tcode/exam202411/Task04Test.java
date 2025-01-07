@@ -34,7 +34,7 @@ class Task04Test {
 
     @ParameterizedTest
     @MethodSource("testData")
-    void mainTest(String input, String out) {
+    void main1Test(String input, String out) {
         // region Given
         byte[] bytes = input.getBytes(StandardCharsets.UTF_8);
         InputStream inputStream = new ByteArrayInputStream(bytes);
@@ -42,7 +42,26 @@ class Task04Test {
         // endregion
 
         // region When
-        Task04.main(null);
+        Task04.main1(null);
+        // endregion
+
+        // region Then
+        assertEquals(out, output.toString().trim());
+        // endregion
+    }
+
+
+    @ParameterizedTest
+    @MethodSource("testData")
+    void main2Test(String input, String out) {
+        // region Given
+        byte[] bytes = input.getBytes(StandardCharsets.UTF_8);
+        InputStream inputStream = new ByteArrayInputStream(bytes);
+        System.setIn(inputStream);
+        // endregion
+
+        // region When
+        Task04.main2(null);
         // endregion
 
         // region Then
